@@ -107,7 +107,7 @@ INSERT INTO professors (prof_name, email, department_id, salary) VALUES
 --       dependent on the ENTIRE primary key (no partial deps).
 --       Relevant only when a table has a composite primary key.
 -- ------------------------------------------------------------
-
+select *from enrollments;
 -- FOCUS TABLE: enrollments
 --   Candidate composite key: (student_id, course_id)
 --   Columns: enrollment_id, enrollment_date, grade
@@ -125,6 +125,7 @@ INSERT INTO professors (prof_name, email, department_id, salary) VALUES
 --
 -- CONCLUSION: enrollments satisfies 2NF. All other tables have
 --   a single-column PK, so partial dependency is impossible. ✓
+
 
 -- ------------------------------------------------------------
 -- 3NF (Third Normal Form)
@@ -163,3 +164,9 @@ INSERT INTO professors (prof_name, email, department_id, salary) VALUES
 -- courses             ✓     ✓     ✓   (dept stored via FK)
 -- enrollments         ✓     ✓     ✓   (no partial/transitive deps)
 -- professors          ✓     ✓     ✓   (dept stored via FK)
+
+-- Task 3
+
+Alter table students add column phone_number VARCHAR(15);
+
+select *from students;
