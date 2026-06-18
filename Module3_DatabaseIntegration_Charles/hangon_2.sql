@@ -16,7 +16,7 @@ select *from courses where credits>3;
 select *from professors where salary between 80000 and 95000;
 select *from students where email like '%@college.edu';
 select count(student_id), year(enrollment_date) from enrollments group by year(enrollment_date);
-
+-- nice
 -- task 3
 select *from students;
 SELECT 
